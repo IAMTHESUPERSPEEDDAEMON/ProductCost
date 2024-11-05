@@ -1,5 +1,7 @@
 package app;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -27,7 +29,24 @@ public class Main {
 
     // Набір вхідних даних
     public static String[] getData() {
-        return new String[] {"abc", "5", "2.5"};
+        Scanner scanner = new Scanner(System.in);
+        String[] productData = new String[3];
+
+        // Input product name
+        System.out.println("Введите название товара: ");
+        productData[0] = scanner.nextLine();
+
+        //Input product quota
+        System.out.println("Введите кол-во товара: ");
+        productData[1] = scanner.nextLine();
+
+        //Input product price
+        System.out.println("Введите цену товара: ");
+        productData[2] = scanner.nextLine();
+
+        scanner.close();
+
+        return productData;
     }
 
     public static void getOutput(String output) {
